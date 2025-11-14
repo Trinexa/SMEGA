@@ -11,8 +11,8 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Tools', href: '/tools' },
+    // { name: 'Case Studies', href: '/case-studies' },
+    // { name: 'Tools', href: '/tools' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -20,12 +20,17 @@ const Header: React.FC = () => {
     return location.pathname === href;
   };
 
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" onClick={handleNavClick} className="flex items-center space-x-2">
             <img src="/C.png" alt="Conseil" className="h-10 w-10" />
             <span className="text-xl font-bold text-gray-900">Conseil</span>
           </Link>
@@ -36,6 +41,7 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={handleNavClick}
                 className={`text-sm font-medium transition-colors duration-200 hover:text-blue-600 ${
                   isActive(item.href) ? 'text-blue-600' : 'text-gray-700'
                 }`}
@@ -45,12 +51,14 @@ const Header: React.FC = () => {
             ))}
             <Link
               to="/admin/login"
+              onClick={handleNavClick}
               className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
               Admin
             </Link>
             <Link
               to="/proposal"
+              onClick={handleNavClick}
               className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 hover:shadow-lg transition-all duration-200 transform hover:scale-105"
             >
               Get Free Quote
@@ -81,7 +89,7 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleNavClick}
                   className={`block text-sm font-medium transition-colors duration-200 hover:text-blue-600 ${
                     isActive(item.href) ? 'text-blue-600' : 'text-gray-700'
                   }`}
@@ -91,14 +99,14 @@ const Header: React.FC = () => {
               ))}
               <Link
                 to="/admin/login"
-                onClick={() => setIsOpen(false)}
+                onClick={handleNavClick}
                 className="block text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
               >
                 Admin Login
               </Link>
               <Link
                 to="/proposal"
-                onClick={() => setIsOpen(false)}
+                onClick={handleNavClick}
                 className="block bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium text-center hover:bg-teal-700 transition-colors"
               >
                 Get Free Quote

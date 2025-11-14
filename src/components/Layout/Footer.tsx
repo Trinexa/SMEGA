@@ -20,15 +20,15 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-teal-400" />
-                <span className="text-gray-300">hello@conseil.agency</span>
+                <span className="text-gray-300">conseil.cmb@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-teal-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">077 663 2155</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-teal-400" />
-                <span className="text-gray-300">123 Business Ave, Tech City, TC 12345</span>
+                <span className="text-gray-300">No.351, R A De Mel Mawatha, Colombo 03</span>
               </div>
             </div>
           </div>
@@ -62,9 +62,20 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 Conseil. All rights reserved.
-            </p>
+            <div className="text-gray-400 text-sm text-center md:text-left">
+              <p>© 2025 Conseil. All rights reserved.</p>
+              <p className="mt-1">
+                Powered by{' '}
+                <a 
+                  href="https://www.trinexatechnology.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:text-teal-300 transition-colors"
+                >
+                  Trinexa Technology
+                </a>
+              </p>
+            </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />

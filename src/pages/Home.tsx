@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CircleCheck as CheckCircle, Star, TrendingUp, Users, Award } from 'lucide-react';
+import { CircleCheck as CheckCircle, Star, TrendingUp, Users, Award, Globe, Smartphone, Palette } from 'lucide-react';
 
 const Home: React.FC = () => {
   const services = [
     {
       title: 'Web Development',
       description: 'Custom websites and web applications built with modern technologies',
-      icon: '🌐',
+      icon: Globe,
       features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Secure']
     },
     {
       title: 'Digital Marketing',
       description: 'Comprehensive digital marketing strategies to grow your business',
-      icon: '📱',
+      icon: Smartphone,
       features: ['Social Media', 'PPC Campaigns', 'Content Marketing', 'Analytics']
     },
     {
       title: 'Brand Design',
       description: 'Professional branding and visual identity for your business',
-      icon: '🎨',
+      icon: Palette,
       features: ['Logo Design', 'Brand Guidelines', 'Marketing Materials', 'Web Design']
     }
   ];
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   const stats = [
     { label: 'Happy Clients', value: '150+', icon: Users },
     { label: 'Projects Completed', value: '300+', icon: CheckCircle },
-    { label: 'Years Experience', value: '8+', icon: Award },
+    { label: 'Years Experience', value: '2+', icon: Award },
     { label: 'Revenue Growth', value: '250%', icon: TrendingUp }
   ];
 
@@ -70,23 +70,25 @@ const Home: React.FC = () => {
                 Digital Expertise
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                We partner with ambitious SMEs worldwide to deliver cutting-edge digital solutions, 
-                strategic marketing, and innovative technology that drives measurable growth.
+                We focus on real business growth — not vanity metrics. Backed by Google Singapore training and experience with 200+ brands, we deliver proven strategies that drive measurable results. Partner with us if you’re serious about scaling your business.
+
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/proposal"
+                <a
+                  href="https://wa.me/94776632155"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-teal-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   Get Free Consultation
-                </Link>
-                <Link
+                </a>
+                {/* <Link
                   to="/case-studies"
                   className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-teal-600 hover:text-teal-600 transition-all duration-300 text-center flex items-center justify-center space-x-2"
                 >
                   <span>View Our Work</span>
                   <ArrowRight className="h-5 w-5" />
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
 
@@ -142,6 +144,99 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Clients Logo Section */}
+      <section className="py-16 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Clients</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Trusted by leading brands worldwide to deliver exceptional digital solutions
+            </p>
+          </motion.div>
+          
+          <div className="relative">
+            <div className="flex overflow-hidden">
+              <div className="flex animate-scroll">
+                {[
+                  { name: 'Moose', logo: 'Moose logo.jpg' },
+                  { name: 'Pan Global', logo: 'Pan Global Logo original.png' },
+                  { name: 'PickMe', logo: 'pick_me.png' },
+                  { name: 'Pizza Hut', logo: 'pizza-hut logo.png' },
+                  { name: 'Burger King', logo: 'burger king logo.png' },
+                  { name: 'Softlogic Glomark', logo: 'Softlogic Glomark.jpg' },
+                  { name: 'Spa Ceylon', logo: 'spa ceylon.jpg' },
+                  { name: 'Teardrop Hotels', logo: 'Teardrops logo.jpg' },
+                  { name: 'Zigzag', logo: 'Zig zag.png' },
+                  { name: 'Ariya Foods', logo: 'Ariya foods.jpg' },
+                  { name: 'Cargills', logo: 'Cargills logo.png' },
+                  { name: 'FMP', logo: 'FMP logo.png' },
+                  { name: 'Fours', logo: 'Fours.png' },
+                  { name: 'GK Homes', logo: 'GK HOMES GOLD 2.png' },
+                  { name: 'Global Mark', logo: 'GLOBAL MARK NEW PNG.png' },
+                  { name: 'Hilton', logo: 'Hilton logo.jpg' },
+                  { name: 'Keells', logo: 'keells logo.png' },
+                  { name: 'McDonalds', logo: 'McDonalds-Logo.png' },
+                  { name: 'Mintpay', logo: 'Mintpay logo.jpg' },
+                  { name: 'Quatros', logo: 'Quatros LOGO.jpg' },
+                ].map((client, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 mx-8 group"
+                  >
+                    <img
+                      src={`/clients/${client.logo}`}
+                      alt={client.name}
+                      className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 group-hover:scale-110"
+                      style={{ transform: 'rotate(270deg)' }}
+                    />
+                  </div>
+                ))}
+                {/* Duplicate for seamless loop */}
+                {[
+                  { name: 'Moose', logo: 'Moose logo.jpg' },
+                  { name: 'Pan Global', logo: 'Pan Global Logo original.png' },
+                  { name: 'PickMe', logo: 'pick_me.png' },
+                  { name: 'Pizza Hut', logo: 'pizza-hut logo.png' },
+                  { name: 'Burger King', logo: 'burger king logo.png' },
+                  { name: 'Softlogic Glomark', logo: 'Softlogic Glomark.jpg' },
+                  { name: 'Spa Ceylon', logo: 'spa ceylon.jpg' },
+                  { name: 'Teardrop Hotels', logo: 'Teardrops logo.jpg' },
+                  { name: 'Zigzag', logo: 'Zig zag.png' },
+                  { name: 'Ariya Foods', logo: 'Ariya foods.jpg' },
+                  { name: 'Cargills', logo: 'Cargills logo.png' },
+                  { name: 'FMP', logo: 'FMP logo.png' },
+                  { name: 'Fours', logo: 'Fours.png' },
+                  { name: 'GK Homes', logo: 'GK HOMES GOLD 2.png' },
+                  { name: 'Global Mark', logo: 'GLOBAL MARK NEW PNG.png' },
+                  { name: 'Hilton', logo: 'Hilton logo.jpg' },
+                  { name: 'Keells', logo: 'keells logo.png' },
+                  { name: 'McDonalds', logo: 'McDonalds-Logo.png' },
+                  { name: 'Mintpay', logo: 'Mintpay logo.jpg' },
+                  { name: 'Quatros', logo: 'Quatros LOGO.jpg' },
+                ].map((client, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="flex-shrink-0 mx-8 group"
+                  >
+                    <img
+                      src={`/clients/${client.logo}`}
+                      alt={client.name}
+                      className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 group-hover:scale-110"
+                      style={{ transform: 'rotate(270deg)' }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,7 +263,9 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="mb-4">
+                  <service.icon className="h-12 w-12 text-gray-900" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
@@ -248,12 +345,14 @@ const Home: React.FC = () => {
               >
                 Start Your Project
               </Link>
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/94776632155"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Talk to Expert
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

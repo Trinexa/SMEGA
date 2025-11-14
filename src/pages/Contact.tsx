@@ -51,20 +51,20 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@digitalpro.com',
+      content: 'conseil.cmb@gmail.com',
       subContent: 'We respond within 24 hours'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      subContent: 'Mon-Fri 9AM-6PM EST'
+      content: '077 663 2155',
+      subContent: 'Mon-Fri 9AM-6PM'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Business Ave',
-      subContent: 'Tech City, TC 12345'
+      content: 'No.351, R A De Mel Mawatha',
+      subContent: 'Colombo 03'
     },
     {
       icon: Clock,
