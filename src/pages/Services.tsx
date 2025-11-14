@@ -10,7 +10,7 @@ const Services: React.FC = () => {
       title: 'Web Development',
       description: 'Custom websites and web applications built with cutting-edge technologies',
       features: ['Responsive Design', 'Fast Loading', 'SEO Optimized', 'Secure & Scalable'],
-      price: 'Starting at $2,999',
+      price: '',
       color: 'from-blue-500 to-blue-600'
     },
     {
@@ -18,7 +18,7 @@ const Services: React.FC = () => {
       title: 'SEO & Digital Marketing',
       description: 'Comprehensive digital marketing strategies to increase your online visibility',
       features: ['Keyword Research', 'Content Strategy', 'Link Building', 'Analytics & Reporting'],
-      price: 'Starting at $899/month',
+      price: '',
       color: 'from-green-500 to-green-600'
     },
     {
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
       features: ['Native Performance', 'Cross-Platform', 'App Store Optimization', 'Push Notifications'],
-      price: 'Starting at $4,999',
+      price: '',
       color: 'from-purple-500 to-purple-600'
     },
     {
@@ -34,7 +34,7 @@ const Services: React.FC = () => {
       title: 'E-commerce Solutions',
       description: 'Complete online stores with payment integration and inventory management',
       features: ['Payment Integration', 'Inventory Management', 'Order Tracking', 'Customer Support'],
-      price: 'Starting at $3,499',
+      price: '',
       color: 'from-orange-500 to-orange-600'
     },
     {
@@ -42,7 +42,7 @@ const Services: React.FC = () => {
       title: 'Analytics & Optimization',
       description: 'Data-driven insights to optimize your digital presence and marketing ROI',
       features: ['Performance Tracking', 'Conversion Optimization', 'A/B Testing', 'Custom Reports'],
-      price: 'Starting at $599/month',
+      price: '',
       color: 'from-teal-500 to-teal-600'
     },
     {
@@ -50,7 +50,7 @@ const Services: React.FC = () => {
       title: 'Brand & Design',
       description: 'Professional branding and visual identity that sets you apart',
       features: ['Logo Design', 'Brand Guidelines', 'Marketing Materials', 'UI/UX Design'],
-      price: 'Starting at $1,499',
+      price: '',
       color: 'from-pink-500 to-pink-600'
     }
   ];
