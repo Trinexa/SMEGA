@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CircleCheck as CheckCircle, Star, TrendingUp, Users, Award, Globe, Smartphone, Palette } from 'lucide-react';
 
 const Home: React.FC = () => {
+  const [hoveredTestimonial, setHoveredTestimonial] = useState<number | null>(null);
   const services = [
     {
       title: 'Web Development',
@@ -186,12 +187,12 @@ const Home: React.FC = () => {
                 ].map((client, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 mx-8 group"
+                    className="flex-shrink-0 mx-8"
                   >
                     <img
                       src={`/clients/${client.logo}`}
                       alt={client.name}
-                      className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 group-hover:scale-110"
+                      className="h-20 w-auto object-contain"
                       style={{ transform: 'rotate(270deg)' }}
                     />
                   </div>
@@ -221,12 +222,12 @@ const Home: React.FC = () => {
                 ].map((client, index) => (
                   <div
                     key={`duplicate-${index}`}
-                    className="flex-shrink-0 mx-8 group"
+                    className="flex-shrink-0 mx-8"
                   >
                     <img
                       src={`/clients/${client.logo}`}
                       alt={client.name}
-                      className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 group-hover:scale-110"
+                      className="h-20 w-auto object-contain"
                       style={{ transform: 'rotate(270deg)' }}
                     />
                   </div>
@@ -306,7 +307,15 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-gray-50 p-6 rounded-xl"
+                onMouseEnter={() => setHoveredTestimonial(index)}
+                onMouseLeave={() => setHoveredTestimonial(null)}
+                className={`bg-gray-50 p-6 rounded-xl transition-all duration-300 cursor-pointer ${
+                  hoveredTestimonial === null 
+                    ? 'blur-0 scale-100' 
+                    : hoveredTestimonial === index 
+                      ? 'blur-0 scale-105 shadow-2xl bg-white z-10' 
+                      : 'blur-sm scale-95 opacity-50'
+                }`}
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

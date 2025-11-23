@@ -7,7 +7,7 @@ const About: React.FC = () => {
     {
       name: 'Alex Rodriguez',
       role: 'CEO & Founder',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '',
       bio: 'Digital strategist with 12+ years of experience helping SMEs scale through technology.'
     },
     {
