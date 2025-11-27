@@ -17,6 +17,12 @@ const About: React.FC = () => {
       bio: 'Driving impactful marketing strategies and campaigns that deliver measurable results for our clients.'
     },
     {
+      name: 'Irushani Lakshika',
+      role: 'Creative Designer',
+      image: '/team/Team - Creative Desinger.jpeg',
+      bio: 'Crafting visually stunning designs that bring brand stories to life and captivate audiences.'
+    },    
+    {
       name: 'Rithmi De Silva',
       role: 'Project Coordinator',
       image: '/team/Team - Project Coordinator.jpeg',
@@ -28,12 +34,7 @@ const About: React.FC = () => {
       image: '/team/Team - HR and Finance Manager.jpeg',
       bio: 'Managing our people and financial operations to create a thriving workplace and sustainable growth.'
     },
-    {
-      name: 'Amali',
-      role: 'Creative Designer',
-      image: '/team/Team - Creative Desinger.jpeg',
-      bio: 'Crafting visually stunning designs that bring brand stories to life and captivate audiences.'
-    }
+
   ];
 
   const values = [
