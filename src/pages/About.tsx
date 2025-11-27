@@ -5,22 +5,34 @@ import { Users, Target, Lightbulb, Award } from 'lucide-react';
 const About: React.FC = () => {
   const team = [
     {
-      name: 'Alex Rodriguez',
-      role: 'CEO & Founder',
-      image: '',
-      bio: 'Digital strategist with 12+ years of experience helping SMEs scale through technology.'
+      name: 'Gamini Kuruppu',
+      role: 'Director',
+      image: '/team/Director.jpeg',
+      bio: 'Leading Conseil with strategic vision and expertise in digital transformation for growing businesses.'
     },
     {
-      name: 'Sarah Mitchell',
-      role: 'Creative Director',
-      image: 'https://images.pexels.com/photos/3783725/pexels-photo-3783725.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Award-winning designer specializing in brand identity and user experience design.'
+      name: 'Kavishka Dissanayake',
+      role: 'Digital Marketing Executive',
+      image: '/team/Team - Digital Marketing Executive.jpeg',
+      bio: 'Driving impactful marketing strategies and campaigns that deliver measurable results for our clients.'
     },
     {
-      name: 'David Park',
-      role: 'Tech Lead',
-      image: 'https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Full-stack developer passionate about building scalable solutions for growing businesses.'
+      name: 'Rithmi De Silva',
+      role: 'Project Coordinator',
+      image: '/team/Team - Project Coordinator.jpeg',
+      bio: 'Ensuring seamless project delivery and client satisfaction through meticulous coordination and planning.'
+    },
+    {
+      name: 'Ashen',
+      role: 'HR and Finance Manager',
+      image: '/team/Team - HR and Finance Manager.jpeg',
+      bio: 'Managing our people and financial operations to create a thriving workplace and sustainable growth.'
+    },
+    {
+      name: 'Amali',
+      role: 'Creative Designer',
+      image: '/team/Team - Creative Desinger.jpeg',
+      bio: 'Crafting visually stunning designs that bring brand stories to life and captivate audiences.'
     }
   ];
 
@@ -153,26 +165,26 @@ const About: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 justify-items-center">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 w-full max-w-sm"
               >
                 <div className="aspect-w-1 aspect-h-1">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
                   <p className="text-teal-600 font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
               </motion.div>
             ))}
