@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/C.png" alt="Conseil" className="h-8 w-8" />
+              <img src="/C.png" alt="Conseil" className="h-10 w-10 object-contain invert brightness-0" />
               <span className="text-xl font-bold">Conseil</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">

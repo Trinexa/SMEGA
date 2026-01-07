@@ -31,7 +31,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" onClick={handleNavClick} className="flex items-center space-x-2">
-            <img src="/C.png" alt="Conseil" className="h-10 w-10" />
+            <img src="/C.png" alt="Conseil" className="h-10 w-10 object-contain" />
             <span className="text-xl font-bold text-gray-900">Conseil</span>
           </Link>
 
