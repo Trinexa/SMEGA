@@ -29,7 +29,7 @@ const About: React.FC = () => {
       bio: 'Ensuring seamless project delivery and client satisfaction through meticulous coordination and planning.'
     },
     {
-      name: 'Ashen',
+      name: 'Ashen Perera',
       role: 'HR and Finance Manager',
       image: '/team/Team - HR and Finance Manager.jpeg',
       bio: 'Managing our people and financial operations to create a thriving workplace and sustainable growth.'
@@ -99,7 +99,7 @@ const About: React.FC = () => {
                 that drives meaningful, measurable growth.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Since 2017, we've partnered with over 150 businesses globally, helping them achieve 
+                Since 2023, we've partnered with over 150 businesses globally, helping them achieve 
                 an average revenue growth of 250% through our comprehensive digital transformation approach.
               </p>
             </motion.div>

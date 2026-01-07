@@ -6,28 +6,20 @@ import { Globe, Search, Smartphone, ShoppingCart, ChartBar as BarChart, Palette,
 const Services: React.FC = () => {
   const services = [
     {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Custom websites and web applications built with cutting-edge technologies',
-      features: ['Responsive Design', 'Fast Loading', 'SEO Optimized', 'Secure & Scalable'],
-      price: '',
-      color: 'from-blue-500 to-blue-600'
-    },
-    {
       icon: Search,
-      title: 'SEO & Digital Marketing',
+      title: 'Digital Marketing & SEO',
       description: 'Comprehensive digital marketing strategies to increase your online visibility',
       features: ['Keyword Research', 'Content Strategy', 'Link Building', 'Analytics & Reporting'],
       price: '',
       color: 'from-green-500 to-green-600'
     },
     {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      features: ['Native Performance', 'Cross-Platform', 'App Store Optimization', 'Push Notifications'],
+      icon: Palette,
+      title: 'Brand & Design',
+      description: 'Professional branding and visual identity that sets you apart',
+      features: ['Logo Design', 'Brand Guidelines', 'Marketing Materials', 'UI/UX Design'],
       price: '',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-pink-500 to-pink-600'
     },
     {
       icon: ShoppingCart,
@@ -46,12 +38,20 @@ const Services: React.FC = () => {
       color: 'from-teal-500 to-teal-600'
     },
     {
-      icon: Palette,
-      title: 'Brand & Design',
-      description: 'Professional branding and visual identity that sets you apart',
-      features: ['Logo Design', 'Brand Guidelines', 'Marketing Materials', 'UI/UX Design'],
+      icon: Globe,
+      title: 'Web Development',
+      description: 'Custom websites and web applications built with cutting-edge technologies',
+      features: ['Responsive Design', 'Fast Loading', 'SEO Optimized', 'Secure & Scalable'],
       price: '',
-      color: 'from-pink-500 to-pink-600'
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      features: ['Native Performance', 'Cross-Platform', 'App Store Optimization', 'Push Notifications'],
+      price: '',
+      color: 'from-purple-500 to-purple-600'
     }
   ];
 

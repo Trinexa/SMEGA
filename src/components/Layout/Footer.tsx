@@ -50,12 +50,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
+              <li><span className="text-gray-300">Digital Marketing</span></li>  
+              <li><span className="text-gray-300">Brand Design</span></li> 
+              <li><span className="text-gray-300">Consulting</span></li>           
               <li><span className="text-gray-300">Web Development</span></li>
-              <li><span className="text-gray-300">Digital Marketing</span></li>
               <li><span className="text-gray-300">SEO Optimization</span></li>
-              <li><span className="text-gray-300">Brand Design</span></li>
-              <li><span className="text-gray-300">E-commerce</span></li>
-              <li><span className="text-gray-300">Consulting</span></li>
+              <li><span className="text-gray-300">E-commerce</span></li>     
             </ul>
           </div>
         </div>

@@ -7,16 +7,16 @@ const Home: React.FC = () => {
   const [hoveredTestimonial, setHoveredTestimonial] = useState<number | null>(null);
   const services = [
     {
-      title: 'Web Development',
-      description: 'Custom websites and web applications built with modern technologies',
-      icon: Globe,
-      features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Secure']
-    },
-    {
       title: 'Digital Marketing',
       description: 'Comprehensive digital marketing strategies to grow your business',
       icon: Smartphone,
       features: ['Social Media', 'PPC Campaigns', 'Content Marketing', 'Analytics']
+    },
+    {
+      title: 'Web Development',
+      description: 'Custom websites and web applications built with modern technologies',
+      icon: Globe,
+      features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Secure']
     },
     {
       title: 'Brand Design',
