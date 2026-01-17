@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, Lightbulb, Award } from 'lucide-react';
+import { Users, Target, Lightbulb, Award, TrendingUp, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   const team = [
@@ -13,25 +14,25 @@ const About: React.FC = () => {
     {
       name: 'Kavishka Dissanayake',
       role: 'Digital Marketing Executive',
-      image: '/team/Team - Digital Marketing Executive.jpeg',
+      image: '/team/kavishka.jpg',
       bio: 'Driving impactful marketing strategies and campaigns that deliver measurable results for our clients.'
     },
     {
       name: 'Irushani Lakshika',
       role: 'Creative Designer',
-      image: '/team/Team - Creative Desinger.jpeg',
+      image: '/team/Irushani.jpg',
       bio: 'Crafting visually stunning designs that bring brand stories to life and captivate audiences.'
     },    
     {
       name: 'Rithmi De Silva',
       role: 'Project Coordinator',
-      image: '/team/Team - Project Coordinator.jpeg',
+      image: '/team/Rithmi.jpg',
       bio: 'Ensuring seamless project delivery and client satisfaction through meticulous coordination and planning.'
     },
     {
       name: 'Ashen Perera',
       role: 'HR and Finance Manager',
-      image: '/team/Team - HR and Finance Manager.jpeg',
+      image: '/team/Ashen.jpg',
       bio: 'Managing our people and financial operations to create a thriving workplace and sustainable growth.'
     },
 
@@ -40,30 +41,29 @@ const About: React.FC = () => {
   const values = [
     {
       icon: Target,
-      title: 'Results-Driven',
-      description: 'We focus on measurable outcomes that directly impact your bottom line.'
-    },
-    {
-      icon: Users,
-      title: 'Client-Centric',
-      description: 'Your success is our success. We build long-term partnerships, not just projects.'
+      title: 'Mission',
+      description: 'To empower brands with strategic, performance-driven marketing systems that fuel real business growth, blending creative storytelling with data-backed execution.'
     },
     {
       icon: Lightbulb,
-      title: 'Innovation',
-      description: 'We stay ahead of digital trends to give your business a competitive edge.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'Quality is non-negotiable. We deliver premium solutions that exceed expectations.'
+      title: 'Vision',
+      description: 'To become the most trusted growth partner in frontier and emerging markets, known for no-nonsense strategies, measurable impact, and long-term business value.'
     }
+  ];
+
+  const services = [
+    'Omni-channel Digital Strategy – Cohesive, full-funnel strategies across Google, Meta, TikTok, and LinkedIn',
+    'Paid Media Advertising – High-ROI campaigns that convert and scale',
+    'Influencer Marketing – Trusted creator partnerships that spark engagement',
+    'Content & Creative Design – Compelling visuals and messaging built to perform',
+    'Email Marketing & CRM – Automated, personalized systems that build loyalty',
+    'Video Production & Storytelling – Impactful narratives that capture attention and convert'
   ];
 
   return (
     <div className="py-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
+      <section className="bg-gradient-to-br from-teal-50 to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -72,53 +72,53 @@ const About: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              About Conseil
+              About Us
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're a global team of digital strategists and technology experts dedicated to helping 
-              ambitious SMEs unlock their full potential through world-class digital solutions 
-              and strategic innovation.
+            <h2 className="text-3xl font-bold text-teal-600 mb-6">
+              A No-Nonsense Marketing Company
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-4">
+              At Conseil LLC, we cut through the noise to deliver marketing that actually drives growth.
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Founded by a former Google ads professional trained by Google Singapore, we combine global 
+              expertise with sharp local insight to help ambitious brands scale with clarity, strategy, and impact.
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mt-4">
+              We've partnered with over <span className="font-bold text-teal-600">200 brands</span> spanning hospitality, 
+              food & beverage, retail, corporate services, and transportation—delivering work that creates 
+              <span className="font-bold"> measurable results, not vanity metrics</span>.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Our Clients Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                To bring global digital expertise to ambitious growing businesses. We believe every 
-                SME deserves access to world-class technology solutions and strategic innovation 
-                that drives meaningful, measurable growth.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Since 2023, we've partnered with over 150 businesses globally, helping them achieve 
-                an average revenue growth of 250% through our comprehensive digital transformation approach.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Team working"
-                className="rounded-2xl shadow-xl"
-              />
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Clients</h2>
+            <p className="text-2xl font-semibold text-teal-600 mb-6">Trusted by Ambitious Brands</p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We collaborate with startups and established leaders across Sri Lanka, the United Kingdom, 
+              India, and the African region.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mt-4">
+              Our clients share one thing in common: <span className="font-bold">a drive to grow</span>.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mt-2">
+              We match that ambition with strategic thinking, performance-driven execution, and an obsession with results.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Mission & Vision Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -127,32 +127,75 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-xl text-gray-600">The principles that guide everything we do</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Purpose</h2>
+            <p className="text-xl text-gray-600">Mission & Vision</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg text-center"
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-full mb-4">
-                  <value.icon className="h-6 w-6 text-teal-600" />
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-teal-100 rounded-full mb-4">
+                  <value.icon className="h-7 w-7 text-teal-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">{value.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* What We Do Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
+            <p className="text-2xl font-semibold text-teal-600 mb-6">Performance-Driven Marketing That Works</p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We don't just run campaigns — we build scalable marketing engines.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mt-2">
+              Our services cover the full digital growth spectrum:
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="grid grid-cols-1 gap-4">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3 bg-gray-50 p-4 rounded-lg hover:bg-teal-50 transition-colors"
+                >
+                  <Zap className="h-6 w-6 text-teal-600 flex-shrink-0 mt-1" />
+                  <p className="text-gray-700 text-lg">{service}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -162,7 +205,7 @@ const About: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-600">
-              The experts behind your digital transformation
+              The experts behind your growth
             </p>
           </motion.div>
 
@@ -173,13 +216,13 @@ const About: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 w-full max-w-sm"
+                className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 w-full max-w-sm"
               >
                 <div className="aspect-w-1 aspect-h-1">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-72 object-cover transition-all duration-300"
                   />
                 </div>
                 <div className="p-6 text-center">
@@ -190,6 +233,36 @@ const About: React.FC = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Work With Us
+            </h2>
+            <p className="text-2xl font-semibold text-white mb-6">
+              Let's Build Something That Works
+            </p>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Ready to stop chasing likes and start driving growth?
+            </p>
+            <p className="text-lg text-white/90 mb-8">
+              Partner with Conseil LLC and build a marketing system designed for measurable results.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block bg-white text-teal-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your Growth Journey →
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>

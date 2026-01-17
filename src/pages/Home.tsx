@@ -101,7 +101,7 @@ const Home: React.FC = () => {
             >
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/team/Team.jpeg"
                   alt="Digital Agency Team"
                   className="rounded-2xl shadow-2xl"
                 />
