@@ -8,7 +8,7 @@ const About: React.FC = () => {
     {
       name: 'Gamini Kuruppu',
       role: 'Director',
-      image: '/team/Director.jpeg',
+      image: '/team/Director Gamini.jpeg',
       bio: 'Leading Conseil with strategic vision and expertise in digital transformation for growing businesses.'
     },
     {
@@ -237,7 +237,7 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600">
+      <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,7 +258,7 @@ const About: React.FC = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block bg-white text-teal-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="inline-block bg-teal-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-teal-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Start Your Growth Journey →
             </Link>
