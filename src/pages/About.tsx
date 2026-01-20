@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, Lightbulb, Award, TrendingUp, Zap } from 'lucide-react';
+import { Target, Lightbulb, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {

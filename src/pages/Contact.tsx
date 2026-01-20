@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Let's Start a Conversation</h2>
               
               <div className="space-y-6 mb-8">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
                       <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl">
