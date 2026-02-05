@@ -14,7 +14,7 @@ const ProtectedRoute: React.FC = () => {
   }
 
   if (!isAdmin) {
-    return <Navigate to="/admin/login" replace />;
+    return <Navigate to="/conseiladmin/login" replace />;
   }
 
   return <Outlet />;

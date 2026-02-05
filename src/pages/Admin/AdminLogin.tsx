@@ -26,7 +26,7 @@ const AdminLogin: React.FC = () => {
 
   useEffect(() => {
     if (user) {
-      navigate('/admin');
+      navigate('/conseiladmin');
     }
   }, [user, navigate]);
 
@@ -44,7 +44,7 @@ const AdminLogin: React.FC = () => {
         }
       } else {
         toast.success('Welcome back!');
-        navigate('/admin');
+        navigate('/conseiladmin');
       }
     } catch (error: any) {
       toast.error('Login failed. Please try again.');
@@ -165,7 +165,7 @@ const AdminLogin: React.FC = () => {
                     It looks like you haven't created an admin account yet. You'll need to set up your admin credentials first.
                   </p>
                   <Link
-                    to="/admin/setup"
+                    to="/conseiladmin/setup"
                     className="inline-flex items-center space-x-2 bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors"
                   >
                     <UserPlus className="h-4 w-4" />

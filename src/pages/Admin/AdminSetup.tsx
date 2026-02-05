@@ -65,7 +65,7 @@ const AdminSetup: React.FC = () => {
             Your admin account has been created successfully. You can now log in to manage your website.
           </p>
           <a
-            href="/admin/login"
+            href="/conseiladmin/login"
             className="w-full bg-teal-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-teal-700 hover:shadow-lg transition-all duration-200 transform hover:scale-105 inline-block"
           >
             Go to Admin Login

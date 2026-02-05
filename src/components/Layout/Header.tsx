@@ -50,13 +50,6 @@ const Header: React.FC = () => {
               </Link>
             ))}
             <Link
-              to="/admin/login"
-              onClick={handleNavClick}
-              className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
-            >
-              Admin
-            </Link>
-            <Link
               to="/proposal"
               onClick={handleNavClick}
               className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 hover:shadow-lg transition-all duration-200 transform hover:scale-105"
@@ -97,13 +90,6 @@ const Header: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                to="/admin/login"
-                onClick={handleNavClick}
-                className="block text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
-              >
-                Admin Login
-              </Link>
               <Link
                 to="/proposal"
                 onClick={handleNavClick}

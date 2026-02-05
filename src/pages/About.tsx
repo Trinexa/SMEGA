@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const team = [
     {
       name: 'Gamini Kuruppu',
-      role: 'Director',
+      role: 'Managing Director',
       image: '/team/Director Gamini.jpeg',
       bio: 'Leading Conseil with strategic vision and expertise in digital transformation for growing businesses.'
     },
@@ -25,7 +25,7 @@ const About: React.FC = () => {
     },    
     {
       name: 'Rithmi De Silva',
-      role: 'Project Coordinator',
+      role: 'Project Manager',
       image: '/team/Rithmi.jpg',
       bio: 'Ensuring seamless project delivery and client satisfaction through meticulous coordination and planning.'
     },

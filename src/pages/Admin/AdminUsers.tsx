@@ -129,7 +129,7 @@ const AdminUsers: React.FC = () => {
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
               <Link
-                to="/admin"
+                to="/conseiladmin"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <ArrowLeft className="h-4 w-4" />

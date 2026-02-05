@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Layout from './components/Layout/Layout';
@@ -47,9 +46,9 @@ function App() {
             </Route>
 
             {/* Admin Routes */}
-            <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/setup" element={<AdminSetup />} />
-            <Route path="/admin" element={<ProtectedRoute />}>
+            <Route path="/conseiladmin/login" element={<AdminLogin />} />
+            <Route path="/conseiladmin/setup" element={<AdminSetup />} />
+            <Route path="/conseiladmin" element={<ProtectedRoute />}>
               <Route index element={<Admin />} />
               <Route path="case-studies" element={<AdminCaseStudies />} />
               <Route path="proposals" element={<AdminProposals />} />
