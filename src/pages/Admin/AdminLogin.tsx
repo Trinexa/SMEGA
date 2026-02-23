@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Lock, Mail, Eye, EyeOff, CircleAlert as AlertCircle, UserPlus, Hop as Home } from 'lucide-react';
+import { Lock, Mail, Eye, EyeOff, Hop as Home } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -16,7 +16,6 @@ const schema = yup.object({
 const AdminLogin: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSetupPrompt, setShowSetupPrompt] = useState(false);
   const { signIn, user } = useAuth();
   const navigate = useNavigate();
 
@@ -36,12 +35,7 @@ const AdminLogin: React.FC = () => {
       const { error } = await signIn(data.email, data.password);
       
       if (error) {
-        if (error.message.includes('Invalid login credentials')) {
-          setShowSetupPrompt(true);
-          toast.error('No admin account found. Please create an admin account first.');
-        } else {
-          toast.error(error.message);
-        }
+        toast.error('Invalid email or password. Please try again.');
       } else {
         toast.success('Welcome back!');
         navigate('/conseiladmin');
@@ -149,32 +143,6 @@ const AdminLogin: React.FC = () => {
             </button>
           </form>
 
-          {showSetupPrompt && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl"
-            >
-              <div className="flex items-start space-x-3">
-                <AlertCircle className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" />
-                <div className="flex-1">
-                  <h3 className="text-sm font-medium text-amber-800 mb-1">
-                    No Admin Account Found
-                  </h3>
-                  <p className="text-sm text-amber-700 mb-3">
-                    It looks like you haven't created an admin account yet. You'll need to set up your admin credentials first.
-                  </p>
-                  <Link
-                    to="/conseiladmin/setup"
-                    className="inline-flex items-center space-x-2 bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors"
-                  >
-                    <UserPlus className="h-4 w-4" />
-                    <span>Create Admin Account</span>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          )}
         </div>
       </motion.div>
     </div>
