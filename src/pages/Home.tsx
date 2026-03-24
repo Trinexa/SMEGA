@@ -35,22 +35,34 @@ const Home: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
+      name: 'Mr. Sashi Mohotti',
+      company: 'Quatros',
       rating: 5,
-      comment: 'DigitalPro transformed our online presence completely. Our revenue increased by 180% within 6 months!'
+      comment: 'Working with Conseil LLC has been a great experience. Their team truly understands our brand vision and consistently delivers creative, high-quality work that helps us stand out. From strategy to execution, they are reliable, responsive, and results-driven. Highly recommended.'
     },
     {
-      name: 'Mike Chen',
-      company: 'GrowthCorp',
+      name: 'Mr.Saleem Malique',
+      company: 'Quatros',
       rating: 5,
-      comment: 'Professional, reliable, and results-driven. They delivered exactly what we needed and more.'
+      comment: 'With Conseil LLC, brands get strategic, high-quality solutions that deliver real impact.'
     },
     {
-      name: 'Emma Davis',
-      company: 'LocalBiz Solutions',
+      name: 'Miss Oshadi Sammani',
+      company: 'Spa Ceylon',
       rating: 5,
-      comment: 'The best investment we made for our business. Highly recommend their services!'
+      comment: 'Conseil LLC provides expert guidance and practical solutions that drive real results.'
+    },
+    {
+      name: 'Miss Eleesha Kalpage',
+      company: 'Spa Ceylon',
+      rating: 5,
+      comment: 'A trusted consulting partner delivering creative solutions and reliable support'
+    },
+    {
+      name: 'Mr. Gamini Kuruppu',
+      company: 'Pan Global',
+      rating: 5,
+      comment: 'Conseil LLC delivers expert guidance that drives smarter, results-focused decisions, providing actionable insights, strategic support, and reliable solutions that help businesses grow and succeed.'
     }
   ];
 
@@ -300,35 +312,38 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                onMouseEnter={() => setHoveredTestimonial(index)}
-                onMouseLeave={() => setHoveredTestimonial(null)}
-                className={`bg-gray-50 p-6 rounded-xl transition-all duration-300 cursor-pointer ${
-                  hoveredTestimonial === null 
-                    ? 'blur-0 scale-100' 
-                    : hoveredTestimonial === index 
-                      ? 'blur-0 scale-105 shadow-2xl bg-white z-10' 
+          <div className="flex justify-center w-full">
+            <div className="flex flex-wrap gap-8 justify-center" style={{ maxWidth: '2000px' }}>
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  onMouseEnter={() => setHoveredTestimonial(index)}
+                  onMouseLeave={() => setHoveredTestimonial(null)}
+                  className={`bg-gray-50 p-6 rounded-xl transition-all duration-300 cursor-pointer ${
+                    hoveredTestimonial === null
+                      ? 'blur-0 scale-100'
+                      : hoveredTestimonial === index
+                      ? 'blur-0 scale-105 shadow-2xl bg-white z-10'
                       : 'blur-sm scale-95 opacity-50'
-                }`}
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4">"{testimonial.comment}"</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-gray-600 text-sm">{testimonial.company}</p>
-                </div>
-              </motion.div>
-            ))}
+                  }`}
+                  style={{ width: '380px', flexShrink: 0 }}
+                >
+                  <div className="flex items-center mb-4 justify-center">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4">"{testimonial.comment}"</p>
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-gray-600 text-sm">{testimonial.company}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
